@@ -1,0 +1,42 @@
+{
+  "schema_version": "1.0",
+  "record_format": "jsonl",
+  "dialogue_turns_per_record": 6,
+  "backend": "openai",
+  "model": "gpt-4.1-mini",
+  "datasets": [
+    {
+      "name": "balanced_6000",
+      "path": "balanced_6000/dialogues.jsonl",
+      "description": "Equal allocation across four simulation profiles.",
+      "records": 6000,
+      "unique_dialogue_ids": 6000,
+      "synthetic_personas": 200,
+      "size_bytes": 6448785,
+      "sha256": "24f9cd2a3c8dead5a8e66a48ab42976e95d37823a9a1cd7df47296d6eb6892b6",
+      "profile_counts": {
+        "anomic": 1500,
+        "broca": 1500,
+        "wernicke": 1500,
+        "global": 1500
+      }
+    },
+    {
+      "name": "aphasiabank_ratio_6000",
+      "path": "aphasiabank_ratio_6000/dialogues.jsonl",
+      "description": "Allocation based on the selected strictly mapped AphasiaBank subset; not clinical prevalence.",
+      "records": 6000,
+      "unique_dialogue_ids": 6000,
+      "synthetic_personas": 200,
+      "size_bytes": 6558048,
+      "sha256": "ba9372e23a905a69a09abdd6ca8e533368ec2a6426cb3d4787946b2d97e65f74",
+      "profile_counts": {
+        "anomic": 2628,
+        "broca": 2529,
+        "wernicke": 521,
+        "global": 322
+      }
+    }
+  ]
+}
+

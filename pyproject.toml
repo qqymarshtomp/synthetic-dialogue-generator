@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gazetalk-synthetic-conversation"
+version = "0.1.0"
+description = "Profile-conditioned synthetic aphasia conversation generation"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "Qianyi Qin"}]
+dependencies = ["openai>=1.30.0"]
+keywords = ["aphasia", "synthetic-data", "conversation", "aac", "llm"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+[project.scripts]
+gazetalk-generate = "gazetalk_synthetic.generate:main"
+gazetalk-evaluate = "gazetalk_synthetic.evaluate:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
