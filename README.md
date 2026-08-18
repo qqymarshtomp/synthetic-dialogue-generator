@@ -195,17 +195,7 @@ The evaluator reports parse success, profile counts, exact patient-text and comp
 python -m unittest discover -s tests -v
 ```
 
-## Before publishing to GitHub
 
-```bash
-git status --short
-git check-ignore -v outputs/llm_cache.jsonl
-rg -n --hidden --glob '!.git/**' 'sk-(proj-)?[A-Za-z0-9_-]{20,}'
-rg -n --hidden --glob '!.git/**' --glob '!.env.example' \
-  '^(OPENAI_API_KEY|ANTHROPIC_API_KEY)=.+'
-```
-
-The last command should not reveal any real credential. Review every staged file before committing.
 
 ## Research and data statement
 
